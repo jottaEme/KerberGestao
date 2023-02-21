@@ -1,0 +1,45 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@using KerberGestaoRegraDeNegocio.Models;
+@model UsuarioDto
+@{
+    ViewData["Title"] = "Cadastrar Novo Usuário";
+}
+<div class="text-center">
+    <h1 class="display-4">Cadastrar Novo Usuário</h1>
+</div>
+
+<form asp-controller="usuario" asp-action="Criar" method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o Nome">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+    <div class="form-group">
+        <label for="Email">E-mail</label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o email">
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+    <div class="form-group">
+        <label for="Login">Login</label>
+        <input type="text" asp-for="Login" class="form-control" placeholder="Digite o Login">
+        @Html.ValidationMessageFor(x => x.Login)
+    </div>
+    <div class="form-group">
+        <label for="Perfil">Perfil</label>
+        <select asp-for="Perfil" class="form-control">
+            <option value="0">Selecione</option>
+            <option value="@PerfilEnum.Admin">Administrador</option>
+            <option value="@PerfilEnum.Padrao">Padrão</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Senha">Senha</label>
+        <input type="password" asp-for="Senha" class="form-control" placeholder="Digite a Senha">
+        @Html.ValidationMessageFor(x => x.Senha)
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Cliente" asp-action="Index" role="button">Voltar</a>
+</form>
+
+
+

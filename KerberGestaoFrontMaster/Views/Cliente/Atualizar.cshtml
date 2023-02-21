@@ -1,0 +1,64 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@model ClienteDto
+@{
+    ViewData["Title"] = "Atualizar Cliente";
+}
+<div class="text-center">
+
+    <h1 class="display-4">Atualizar Cliente</h1>
+
+</div>
+
+<form asp-controller="Cliente" asp-action="Atualizar" method="post">
+    <input type="hidden" asp-for="IdCliente" />
+    <div class="form-group">
+        <label for="NomeCliente">Nome do Cliente</label>
+        <input type="text" asp-for="NomeCliente" class="form-control" placeholder="Digite o nome do Cliente">
+        @Html.ValidationMessageFor(x => x.NomeCliente)
+    </div>
+    <div class="form-group">
+        <label for="CpfCliente">CPF do Cliente</label>
+        <input type="text" asp-for="CpfCliente" class="form-control" placeholder="Digite o CPF do Cliente">
+        @Html.ValidationMessageFor(x => x.CpfCliente)
+    </div>
+    <div class="form-group">
+        <label for="EnderecoCliente">Endereço do Cliente</label>
+        <input type="text" asp-for="EnderecoCliente" class="form-control" placeholder="Digite o Endereço do Cliente">
+        @Html.ValidationMessageFor(x => x.EnderecoCliente)
+    </div>
+    <div class="form-group">
+        <label for="BairroCliente">Bairro do Cliente</label>
+        <input type="text" asp-for="BairroCliente" class="form-control" placeholder="Digite o Bairro do Cliente">
+        @Html.ValidationMessageFor(x => x.BairroCliente)
+    </div>
+    <div class="form-group">
+        <label for="CidadeCliente">Cidade do Cliente</label>
+        <input type="text" asp-for="CidadeCliente" class="form-control" placeholder="Digite a Cidade do Cliente">
+        @Html.ValidationMessageFor(x => x.CidadeCliente)
+    </div>
+    <div class="form-group">
+        <label for="EstadoCliente">Estado do Cliente</label>
+        <input type="text" asp-for="EstadoCliente" class="form-control" placeholder="Digite o Estado do Cliente">
+        @Html.ValidationMessageFor(x => x.EstadoCliente)
+    </div>
+    <div class="form-group">
+        <label for="TelefoneCliente">Telefone do Cliente</label>
+        <input type="text" asp-for="TelefoneCliente" class="form-control" placeholder="Digite o Telefone do Cliente">
+        @Html.ValidationMessageFor(x => x.TelefoneCliente)
+    </div><div class="form-group">
+        <label for="CelularCliente">Celular do Cliente</label>
+        <input type="text" asp-for="CelularCliente" class="form-control" placeholder="Digite o Celular do Cliente">
+        @Html.ValidationMessageFor(x => x.CelularCliente)
+    </div>
+    <div class="form-group">
+        <label for="StatusCliente">Status do Cliente</label>
+        <input type="text" asp-for="StatusCliente" class="form-control" placeholder="Digite o Status do Cliente">
+        @Html.ValidationMessageFor(x => x.StatusCliente)
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Cliente" asp-action="Index" role="button">Voltar</a>
+</form>
+
+
+

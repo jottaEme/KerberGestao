@@ -1,0 +1,77 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@model List<ClienteDto>
+@{
+    ViewData["Title"] = "Cadastro de Cliente";
+}
+
+@if(TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+<br />
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-outline-success" role="button" asp-controller="Cliente" asp-action="Criar">Cadastrar Cliente</a>
+</div>
+<br />
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Clientes</h1>
+    <br />
+    <table class="table" id="table-clientes">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Cpf</th>
+                <th scope="col">End</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var cliente in Model)
+                {
+                    <tr>
+                        <th scope="row">@cliente.IdCliente</th>
+                        <td>@cliente.NomeCliente</td>
+                        <td>@cliente.CpfCliente</td>
+                        <td>@cliente.EnderecoCliente</td>
+                        <td>@cliente.BairroCliente</td>
+                        <td>@cliente.CidadeCliente</td>
+                        <td>@cliente.EstadoCliente</td>
+                        <td>@cliente.TelefoneCliente</td>
+                        <td>@cliente.CelularCliente</td>
+                        <td>@cliente.StatusCliente</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-outline-success" asp-route-id="@cliente.IdCliente" asp-controller="Cliente" asp-action="Atualizar">Editar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

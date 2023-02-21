@@ -1,0 +1,32 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@model List<ProjetoDto>
+@{
+    ViewData["Title"] = "Cadastro de Cliente";
+}
+
+<div class="text-center">
+    <h1 class="display-4">PROJETOS</h1>
+    <br />
+    @if (Model != null && Model.Any())
+    {
+        foreach (var projeto in Model)
+        {
+            <br />
+            <font size="5">@projeto.NomeProjeto</font>
+            if(projeto.StatusProjeto == 1)
+            {
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <font size="4">Iniciado</font>
+            }
+            if (projeto.StatusProjeto == 2)
+            {
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <font size="4">Andamento Inicial</font>
+            }
+        }
+    }
+</div>

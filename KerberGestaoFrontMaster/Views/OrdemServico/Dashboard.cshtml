@@ -1,0 +1,35 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@model List<OrdemServicoDto>
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">x</button>
+    @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">x</button>
+    @TempData["MensagemErro"]
+    </div>
+}
+<br />
+
+@foreach(var os in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">@os.Titulo</h5>
+            <h6 class="card-subtitle mb-2 text-muted">@os.Status</h6>
+            <p class="card-text">@os.Detalhamento</p>
+            <a href="#" class="card-link">@os.IdOrdemServico</a>
+            <a href="#" class="card-link">@os.IdCliente</a>
+        </div>
+    </div>
+}
