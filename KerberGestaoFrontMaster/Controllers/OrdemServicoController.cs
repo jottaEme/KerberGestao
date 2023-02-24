@@ -34,7 +34,7 @@ namespace KerberGestaoFrontMaster.Controllers
 
         public IActionResult Dashboard()
         {
-            var ordensDeServiço = ordemServicoService.PegarTodos();
+            var ordensDeServiço = ordemServicoService.PegarTodosComNome();
 
             return View(ordensDeServiço);
         }

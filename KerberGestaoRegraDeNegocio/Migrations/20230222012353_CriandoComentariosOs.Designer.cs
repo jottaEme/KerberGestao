@@ -3,6 +3,7 @@ using System;
 using KerberGestaoRegraDeNegocio.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KerberGestaoRegraDeNegocio.Migrations
 {
     [DbContext(typeof(kerbergestaoContext))]
-    partial class kerbergestaoContextModelSnapshot : ModelSnapshot
+    [Migration("20230222012353_CriandoComentariosOs")]
+    partial class CriandoComentariosOs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

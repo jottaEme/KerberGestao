@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using KerberGestaoRegraDeNegocio.Models.Entities;
+﻿using KerberGestaoRegraDeNegocio.Models.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace KerberGestaoRegraDeNegocio.Data
 {
@@ -22,6 +19,7 @@ namespace KerberGestaoRegraDeNegocio.Data
         public virtual DbSet<Projeto> Projetos { get; set; } = null!;
         public virtual DbSet<Ordemservico> Ordemservicos { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<ComentariosOrdemServico> ComentariosOrdemServico { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

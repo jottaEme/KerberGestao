@@ -13,6 +13,9 @@ namespace KerberGestaoRegraDeNegocio.Models.Profiles
 
             CreateMap<OrdemServicoDto, Ordemservico>()
                .ReverseMap();
+
+            CreateMap<OrdemServicoComNomesDto, Ordemservico>()
+               .ReverseMap();
         }
     }
 }

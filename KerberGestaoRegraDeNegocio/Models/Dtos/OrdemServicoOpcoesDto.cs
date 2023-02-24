@@ -8,6 +8,6 @@
         public int IdOrcamento { get; set; }
         public string Titulo { get; set; } = null!;
         public string Detalhamento { get; set; } = null!;
-        public int Status { get; set; }
+        public StatusOrdemServicoEnum Status { get; set; }
     }
 }
