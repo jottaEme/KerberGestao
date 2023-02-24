@@ -13,16 +13,13 @@
             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="OrdemServico" asp-action="Dashboard">Dashboard</a>
+            <a class="nav-link text-white" asp-area="" asp-controller="OrdemServico" asp-action="Index">Ordem de Serviço</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" asp-area="" asp-controller="Projeto" asp-action="Index">Projetos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="OrdemServico" asp-action="Index">Ordem de Serviço</a>
         </li>
         @if (Model.Perfil == PerfilEnum.Admin)
         {

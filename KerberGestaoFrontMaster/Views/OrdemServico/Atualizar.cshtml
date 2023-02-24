@@ -1,1 +1,71 @@
-﻿
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@using KerberGestaoRegraDeNegocio.Models;
+@model OrdemServicoComNomesDto
+@{
+    ViewData["Title"] = "Atualizar Ordem de Serviço";
+}
+<head>
+    <link rel="stylesheet" href="~/css/ordem-servico-atualizar.css" />
+</head>
+<div class="text-center">
+
+    <h1 class="display-4">Atualizar Ordem de Serviço</h1>
+
+</div>
+
+<form asp-controller="OrdemServico" asp-action="Atualizar" method="post">
+    <input type="hidden" asp-for="IdOrdemServico" />
+    <div class="form-group">
+        <label for="NomeCliente">Título</label>
+        <input type="text" asp-for="Titulo" class="form-control" placeholder="Digite o Título">
+        @Html.ValidationMessageFor(x => x.Titulo)
+    </div>
+    <br />
+    <div  class="col-xs-7">
+        <div id="teste" class="col-lg-5">
+            <label for="Cliente">Nome do Cliente</label>
+            <input type="text" asp-for="Cliente.NomeCliente" class="form-control" placeholder="Digite o Nome do Cliente" readonly>
+            @Html.ValidationMessageFor(x => x.Cliente)
+        </div>
+        <div id="teste" class="col-lg-2">
+            <label for="Cliente">Id do Cliente</label>
+            <input type="text" asp-for="Cliente.IdCliente" class="form-control" placeholder="Digite o Nome do Cliente" readonly>
+            @Html.ValidationMessageFor(x => x.Cliente)
+        </div>
+    </div>
+    <br />
+    <div class="col-xs-7">
+        <div id="teste" class="col-lg-5">
+            <label for="Orcamento">Nome do Orçamento</label>
+            <input type="text" asp-for="Orcamento.NomeOrcamento" class="form-control" placeholder="Digite o Nome do Orçamento" readonly>
+            @Html.ValidationMessageFor(x => x.Orcamento)
+        </div>
+        <div id="teste" class="col-lg-2">
+            <label for="Orcamento">Id do Orçamento</label>
+            <input type="text" asp-for="Orcamento.IdOrcamentos" class="form-control" placeholder="Digite o Nome do Orçamento" readonly>
+            @Html.ValidationMessageFor(x => x.Orcamento)
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="Detalhamento">Descreva aqui</label>
+        <textarea class="form-control" asp-for="Detalhamento" id="exampleFormControlTextarea1" rows="6"></textarea>
+    </div>
+    <br />
+    <div class="form-group col-md-6">
+        <label for="Status">Status:</label>
+        <select class="form-control" id="Status" name="Status">
+            <option selected>@Model.Status</option>
+            <option value="@StatusOrdemServicoEnum.Iniciado">Iniciado</option>
+            <option value="@StatusOrdemServicoEnum.Impedimento">Impedimento</option>
+            <option value="@StatusOrdemServicoEnum.Finalizado">Finalizado</option>
+        </select>
+    </div>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-outline-primary btn-block">Alterar</button>
+    <a class="btn btn-outline-secondary btn-block" asp-controller="OrdemServico" asp-action="Dashboard" role="button">Voltar</a>
+</form>
+
+
+

@@ -6,5 +6,7 @@ namespace KerberGestaoRegraDeNegocio.Repositories.Interface
     {
         Ordemservico Criar(Ordemservico ordemServico);
         List<Ordemservico> PegarTodos();
+        Ordemservico PegarPeloId(int id);
+        Ordemservico Atualizar(Ordemservico os);
     }
 }

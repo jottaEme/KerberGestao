@@ -1,4 +1,5 @@
 ﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@using KerberGestaoRegraDeNegocio.Models;
 @model List<ProjetoDto>
 @{
     ViewData["Title"] = "Cadastro de Cliente";
@@ -9,24 +10,36 @@
     <br />
     @if (Model != null && Model.Any())
     {
+        <br />
         foreach (var projeto in Model)
         {
-            <br />
             <font size="5">@projeto.NomeProjeto</font>
-            if(projeto.StatusProjeto == 1)
+            if (projeto.StatusProjeto == StatusOrdemServicoEnum.Iniciado)
             {
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <font size="4">Iniciado</font>
+                <font size="4">@projeto.StatusProjeto</font>
+                <form asp-controller="Projeto" asp-action="Atualizar" method="post">
+                    <input type="hidden" asp-for="@projeto.IdProjeto" />
+                    <button type="submit" class="btn btn-outline-primary btn-block">Alterar</button>
+                </form>
             }
-            if (projeto.StatusProjeto == 2)
+            if (projeto.StatusProjeto == StatusOrdemServicoEnum.Finalizado)
             {
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <font size="4">Andamento Inicial</font>
+                <font size="4">@projeto.StatusProjeto</font>
+                <form asp-controller="Projeto" asp-action="Atualizar" method="post">
+                    <input type="hidden" asp-for="@projeto.IdProjeto" />
+                    <button type="submit" class="btn btn-outline-primary btn-block">Alterar</button>
+                </form>
             }
+            <p> </p>
+            <hr width="100%" align="center" />
+            <p> </p>
+            
         }
     }
 </div>

@@ -7,5 +7,7 @@ namespace KerberGestaoRegraDeNegocio.Services.Interfaces
         void Criar(OrdemServicoOpcoesDto osOpcoes);
         List<OrdemServicoDto> PegarTodos();
         List<OrdemServicoComNomesDto> PegarTodosComNome();
+        OrdemServicoComNomesDto PegarPeloId(int id);
+        void Atualizar(OrdemServicoComNomesDto osComNomes);
     }
 }

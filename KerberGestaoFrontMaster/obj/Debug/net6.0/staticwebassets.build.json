@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZsqenfksbAMav5JZnrgGS6q0FF/rONEeZOqer5dCWV0=",
+  "Hash": "OBafQ/N4t/sHRmnfLfWJL1yGPIsZjqOPI7MoVJD4+u4=",
   "Source": "KerberGestaoFrontMaster",
   "BasePath": "_content/KerberGestaoFrontMaster",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\KerberGestaoFrontMaster.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\ordem-servico-atualizar.css",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "css/ordem-servico-atualizar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ordem-servico-atualizar.css"
     },
     {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\site.css",

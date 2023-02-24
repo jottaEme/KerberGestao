@@ -6,10 +6,10 @@ namespace KerberGestaoRegraDeNegocio.Models.Dtos
     {
         [JsonProperty("IdCliente", NullValueHandling = NullValueHandling.Ignore)]
         public int IdOrdemServico { get; set; }
-        public string NomeCliente { get; set; }
-        public string NomeOrcamento { get; set; }
+        public ClienteSimplificadoDto Cliente { get; set; }
+        public OrcamentoSimplificadoDto Orcamento { get; set; }
         public string Titulo { get; set; } = null!;
         public string Detalhamento { get; set; } = null!;
-        public int Status { get; set; }
+        public StatusOrdemServicoEnum Status { get; set; }
     }
 }

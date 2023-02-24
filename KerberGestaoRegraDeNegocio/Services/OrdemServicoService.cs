@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
 using KerberGestaoRegraDeNegocio.Models.Entities;
-using KerberGestaoRegraDeNegocio.Repositories;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
 
@@ -40,14 +39,34 @@ namespace KerberGestaoRegraDeNegocio.Services
             foreach(var os in ordensDeServico)
             {
                 var cliente = clienteService.PegarPeloId(os.IdCliente);
-                osComNomes.FirstOrDefault(x => x.IdOrdemServico == os.IdOrdemServico).NomeCliente = cliente.NomeCliente;
+                osComNomes.FirstOrDefault(x => x.IdOrdemServico == os.IdOrdemServico).Cliente 
+                    = mapper.Map<ClienteSimplificadoDto>(cliente);
             }
             foreach (var os in ordensDeServico)
             {
                 var orcamento = orcamentoService.PegarPeloId(os.IdOrcamento);
-                osComNomes.FirstOrDefault(x => x.IdOrdemServico == os.IdOrdemServico).NomeOrcamento = orcamento.NomeOrcamento;
+                osComNomes.FirstOrDefault(x => x.IdOrdemServico == os.IdOrdemServico).Orcamento 
+                    = mapper.Map<OrcamentoSimplificadoDto>(orcamento);
             }
             return osComNomes;
+        }
+
+        public OrdemServicoComNomesDto PegarPeloId(int id)
+        {
+            var osEntity = ordemServicoRepository.PegarPeloId(id);
+            var osComNomes = mapper.Map<OrdemServicoComNomesDto>(osEntity);
+            osComNomes.Cliente = mapper.Map<ClienteSimplificadoDto>(clienteService.PegarPeloId(osEntity.IdCliente));
+            osComNomes.Orcamento = mapper.Map<OrcamentoSimplificadoDto>(orcamentoService.PegarPeloId(osEntity.IdOrcamento));
+            
+            return osComNomes;
+        }
+
+        public void Atualizar(OrdemServicoComNomesDto osComNomes)
+        {
+            var osEntity = mapper.Map<Ordemservico>(osComNomes);
+            osEntity.IdCliente = osComNomes.Cliente.IdCliente;
+            osEntity.IdOrcamento = osComNomes.Orcamento.IdOrcamentos;
+            ordemServicoRepository.Atualizar(osEntity);
         }
     }
 }

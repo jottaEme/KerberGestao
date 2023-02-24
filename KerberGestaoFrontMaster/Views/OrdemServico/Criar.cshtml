@@ -1,0 +1,58 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@using KerberGestaoRegraDeNegocio.Models;
+@model OrdemServicoOpcoesDto
+@{
+    ViewData["Title"] = "Criar Ordem de Serviço";
+}
+
+<form asp-controller="OrdemServico" asp-action="CriarNoBanco" method="post">
+    <h1 class="display-4">Ordem de Serviço</h1>
+    <br />
+    <div class="form-group">
+        <label for="Titulo">Titulo</label>
+        <input type="text" asp-for="Titulo" class="form-control" placeholder="Titulo">
+    </div>
+    <br />
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="IdOrcamento">Orcamentos:</label>
+            <select class="form-control" id="IdOrcamento" name="IdOrcamento">
+                <option selected>Escolha</option>
+                @foreach (var orcamentos in Model.Orcamentos)
+                {
+                    <option value="@orcamentos.IdOrcamentos">@orcamentos.NomeOrcamento</option>
+                }
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="IdCliente">Clientes:</label>
+            <select class="form-control" id="IdCliente" name="IdCliente">
+                <option selected>Escolha</option>
+                @foreach (var clientes in Model.Clientes)
+                {
+                    <option value="@clientes.IdCliente">@clientes.NomeCliente</option>
+                }
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Status">Status:</label>
+            <select class="form-control" id="Status" name="Status">
+                <option selected>Escolha</option>
+                <option value="@StatusOrdemServicoEnum.Iniciado">Iniciado</option>
+                <option value="@StatusOrdemServicoEnum.Impedimento">Impedimento</option>
+                <option value="@StatusOrdemServicoEnum.Finalizado">Finalizado</option>
+            </select>
+        </div>
+    </div>
+
+    <br />
+    <div class="form-group">
+        <label for="Detalhamento">Descreva aqui</label>
+        <textarea class="form-control" asp-for="Detalhamento" id="exampleFormControlTextarea1" rows="6"></textarea>
+    </div>
+    <br />
+    <br />
+    <button style="text-align:center" type="submit" class="btn btn-outline-success">Confirmar</button>
+    <a class="btn btn-outline-secondary btn-block" asp-controller="OrdemServico" asp-action="Dashboard" role="button">Voltar</a>
+</form>

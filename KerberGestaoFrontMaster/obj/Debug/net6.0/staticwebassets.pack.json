@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\KerberGestaoFrontMaster.bundle.scp.css"
     },
     {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\ordem-servico-atualizar.css",
+      "PackagePath": "staticwebassets\\css\\ordem-servico-atualizar.css"
+    },
+    {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

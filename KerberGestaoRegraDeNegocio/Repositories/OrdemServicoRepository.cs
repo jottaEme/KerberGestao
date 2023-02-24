@@ -24,5 +24,29 @@ namespace KerberGestaoRegraDeNegocio.Repositories
         {
             return dbContext.Ordemservicos.ToList();
         }
+
+        public Ordemservico PegarPeloId(int id)
+        {
+            return dbContext.Ordemservicos.FirstOrDefault(x => x.IdOrdemServico == id);
+        }
+
+        public Ordemservico Atualizar(Ordemservico os)
+        {
+            Ordemservico osNoBanco = PegarPeloId(os.IdOrdemServico);
+
+            if (osNoBanco == null)
+            {
+                throw new System.Exception("Ordem de Serviço não encontrada em nosso Banco de Dados.");
+            }
+
+            osNoBanco.Titulo = os.Titulo;
+            osNoBanco.Detalhamento = os.Detalhamento;
+            osNoBanco.Status = os.Status;
+
+            dbContext.Ordemservicos.Update(osNoBanco);
+            dbContext.SaveChanges();
+
+            return osNoBanco;
+        }
     }
 }

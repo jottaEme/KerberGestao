@@ -10,6 +10,8 @@ namespace KerberGestaoRegraDeNegocio.Models.Profiles
         {
             CreateMap<Cliente, ClienteDto>()
                 .ReverseMap();
+            CreateMap<ClienteSimplificadoDto, ClienteDto>()
+                .ReverseMap();
         }
     }
 }

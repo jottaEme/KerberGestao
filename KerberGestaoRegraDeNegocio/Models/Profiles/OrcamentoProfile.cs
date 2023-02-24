@@ -10,6 +10,8 @@ namespace KerberGestaoRegraDeNegocio.Models.Profiles
         {
             CreateMap<Orcamento, OrcamentoDto>()
                 .ReverseMap();
+            CreateMap<OrcamentoSimplificadoDto, OrcamentoDto>()
+                .ReverseMap();
         }
     }
 }

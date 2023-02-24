@@ -20,7 +20,7 @@ namespace KerberGestaoFrontMaster.Controllers
             this.ordemServicoService = ordemServicoService;
         }
 
-        public IActionResult Index()
+        public IActionResult Criar()
         {
             var orcamentos = orcamentoService.PegarTodos();
             var clientes = clienteService.PegarTodos();
@@ -32,10 +32,10 @@ namespace KerberGestaoFrontMaster.Controllers
             return View(ordemServicoOpcoes);
         }
 
-        public IActionResult Dashboard()
+        public IActionResult Index()
         {
             var ordensDeServiço = ordemServicoService.PegarTodosComNome();
-
+            ordensDeServiço = ordensDeServiço.OrderBy(x => (int)x.Status).ToList();
             return View(ordensDeServiço);
         }
 
@@ -49,6 +49,33 @@ namespace KerberGestaoFrontMaster.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Atualizar(int id)
+        {
+            var response = ordemServicoService.PegarPeloId(id);
+            return View(response);
+        }
+
+        [HttpPost]
+        public IActionResult Atualizar(OrdemServicoComNomesDto osComNomes)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ordemServicoService.Atualizar(osComNomes);
+                    TempData["MensagemSucesso"] = $"Ordem De Serviço do Cliente {osComNomes.Cliente.NomeCliente} alterado com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View(osComNomes);
+            }
+            catch (Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível alterar a Ordem de Serviço. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
         }
     }
 }
