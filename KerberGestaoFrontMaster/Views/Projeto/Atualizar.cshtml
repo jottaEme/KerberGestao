@@ -1,0 +1,54 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@using KerberGestaoRegraDeNegocio.Models;
+@model ProjetoDto
+@{
+    ViewData["Title"] = "Atualizar Projeto";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Duas-Divs-Na-Linha.css" />
+</head>
+<div class="text-center">
+
+    <h1 class="display-4">Atualizar Projeto</h1>
+
+</div>
+
+<form asp-controller="Projeto" asp-action="Atualizar" method="post">
+    <input type="hidden" asp-for="IdProjeto" />
+    <div class="col-xs-7">
+        <div id="duasDivs" class="col-lg-5">
+            <label for="NomeCliente">Nome do Cliente</label>
+            <input type="text" asp-for="Cliente.NomeCliente" class="form-control" placeholder="Digite o Nome do Cliente" readonly>
+            @Html.ValidationMessageFor(x => x.Cliente.NomeCliente)
+        </div>
+        <div id="duasDivs" class="col-lg-2">
+            <label for="IdCliente">Id do Cliente</label>
+            <input type="text" asp-for="Cliente.IdCliente" class="form-control" placeholder="Digite o Id do Cliente" readonly>
+            @Html.ValidationMessageFor(x => x.Cliente.IdCliente)
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NomeProjeto">Nome do Projeto</label>
+        <input type="text" asp-for="NomeProjeto" class="form-control" placeholder="Digite o Nome do Projeto">
+        @Html.ValidationMessageFor(x => x.NomeProjeto)
+    </div>
+    <div class="form-group">
+        <label for="Descricao">Descrição</label>
+        <textarea class="form-control" asp-for="Descricao" id="exampleFormControlTextarea1" rows="6"></textarea>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="Status">Status:</label>
+        <select class="form-control" id="Status" name="Status">
+            <option selected>@Model.StatusProjeto</option>
+            <option value="@StatusProjetoEnum.Iniciado">Iniciado</option>
+            <option value="@StatusProjetoEnum.EmAndamento">Impedimento</option>
+            <option value="@StatusProjetoEnum.Impedimento">Impedimento</option>
+            <option value="@StatusProjetoEnum.Finalizado">Finalizado</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-outline-primary btn-block">Alterar</button>
+    <a class="btn btn-outline-secondary btn-block" asp-controller="Projeto" asp-action="Index" role="button">Voltar</a>
+</form>
+
+
+

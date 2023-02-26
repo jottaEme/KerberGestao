@@ -1,3 +1,11 @@
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.csproj.AssemblyReference.cache
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.AssemblyInfoInputs.cache
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.AssemblyInfo.cs
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.csproj.CoreCompileInputs.cache
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.MvcApplicationPartsAssemblyInfo.cache
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.RazorAssemblyInfo.cache
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.RazorAssemblyInfo.cs
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\appsettings.Development.json
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\appsettings.json
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\KerberGestaoFrontMaster.staticwebassets.runtime.json
@@ -17,6 +25,7 @@ C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Entity
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -36,14 +45,6 @@ C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\runtimes\win-x86
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.dll
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.pdb
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.csproj.AssemblyReference.cache
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.GeneratedMSBuildEditorConfig.editorconfig
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.AssemblyInfoInputs.cache
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.AssemblyInfo.cs
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.csproj.CoreCompileInputs.cache
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.MvcApplicationPartsAssemblyInfo.cache
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.RazorAssemblyInfo.cache
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.RazorAssemblyInfo.cs
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\staticwebassets\msbuild.KerberGestaoFrontMaster.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\staticwebassets\msbuild.build.KerberGestaoFrontMaster.props
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.KerberGestaoFrontMaster.props
@@ -61,4 +62,3 @@ C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\refint\KerberGes
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.pdb
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.genruntimeconfig.cache
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\ref\KerberGestaoFrontMaster.dll
-C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll

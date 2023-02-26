@@ -8,7 +8,7 @@
 @if (TempData["MensagemErro"] != null)
 {
     <div class="alert alert-danger" role="alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        <button type="button" class="btn btn-outline-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
         @TempData["MensagemErro"]
     </div>
 }
@@ -16,7 +16,7 @@
 @if (TempData["MensagemSucesso"] != null)
 {
     <div class="alert alert-success" role="alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        <button type="button" class="btn btn-outline-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
         @TempData["MensagemSucesso"]
     </div>
 }
@@ -33,6 +33,6 @@
         @Html.ValidationMessageFor(x => x.Email)
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block">Redefinir Senha</button>
-    <a class="btn btn-secondary btn-block" asp-controller="Login" asp-action="Index" role="button">Voltar</a>
+    <button type="submit" class="btn btn-outline-primary btn-block">Redefinir Senha</button>
+    <a class="btn btn-outline-secondary btn-block" asp-controller="Login" asp-action="Index" role="button">Voltar</a>
 </form>

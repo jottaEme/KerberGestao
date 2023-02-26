@@ -5,7 +5,7 @@
     ViewData["Title"] = "Atualizar Ordem de Serviço";
 }
 <head>
-    <link rel="stylesheet" href="~/css/ordem-servico-atualizar.css" />
+    <link rel="stylesheet" href="~/css/Duas-Divs-Na-Linha.css" />
 </head>
 <div class="text-center">
 
@@ -22,12 +22,12 @@
     </div>
     <br />
     <div  class="col-xs-7">
-        <div id="teste" class="col-lg-5">
+        <div id="duasDivs" class="col-lg-5">
             <label for="Cliente">Nome do Cliente</label>
             <input type="text" asp-for="Cliente.NomeCliente" class="form-control" placeholder="Digite o Nome do Cliente" readonly>
             @Html.ValidationMessageFor(x => x.Cliente)
         </div>
-        <div id="teste" class="col-lg-2">
+        <div id="duasDivs" class="col-lg-2">
             <label for="Cliente">Id do Cliente</label>
             <input type="text" asp-for="Cliente.IdCliente" class="form-control" placeholder="Digite o Nome do Cliente" readonly>
             @Html.ValidationMessageFor(x => x.Cliente)

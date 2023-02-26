@@ -8,7 +8,7 @@
 @if (TempData["MensagemErro"] != null)
 {
     <div class="alert alert-danger" role="alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        <button type="button" class="btn btn-outline-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
         @TempData["MensagemErro"]
     </div>
 }
@@ -16,7 +16,7 @@
 @if (TempData["MensagemSucesso"] != null)
 {
     <div class="alert alert-success" role="alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        <button type="button" class="btn btn-outline-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
         @TempData["MensagemSucesso"]
     </div>
 }
@@ -36,5 +36,5 @@
         Esqueceu sua senha?
         <a asp-action="RedefinirSenha" asp-controller="Login" class="text-primary text-gradient font-weight-bold">Redefinir minha senha</a>
     </p>
-    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+    <button type="submit" class="btn btn-outline-primary btn-block">Entrar</button>
 </form>

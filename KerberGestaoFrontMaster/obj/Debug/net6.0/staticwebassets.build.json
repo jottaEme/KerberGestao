@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OBafQ/N4t/sHRmnfLfWJL1yGPIsZjqOPI7MoVJD4+u4=",
+  "Hash": "kkuvJ/31q/Hn+57r1MNpMnq5kKk7PUEx3XHMdkaRm2o=",
   "Source": "KerberGestaoFrontMaster",
   "BasePath": "_content/KerberGestaoFrontMaster",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\KerberGestaoFrontMaster.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\ordem-servico-atualizar.css",
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\Duas-Divs-Na-Linha.css",
       "SourceId": "KerberGestaoFrontMaster",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
       "BasePath": "_content/KerberGestaoFrontMaster",
-      "RelativePath": "css/ordem-servico-atualizar.css",
+      "RelativePath": "css/Duas-Divs-Na-Linha.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\ordem-servico-atualizar.css"
+      "OriginalItemSpec": "wwwroot\\css\\Duas-Divs-Na-Linha.css"
+    },
+    {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\Projeto-Index.css",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "css/Projeto-Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Projeto-Index.css"
     },
     {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\site.css",

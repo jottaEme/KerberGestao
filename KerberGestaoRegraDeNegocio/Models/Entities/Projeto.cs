@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace KerberGestaoRegraDeNegocio.Models.Entities
+﻿namespace KerberGestaoRegraDeNegocio.Models.Entities
 {
     public partial class Projeto
     {
         public int IdProjeto { get; set; }
+        public int IdCliente { get; set; }
         public string NomeProjeto { get; set; } = null!;
-        public int StatusProjeto { get; set; }
+        public string Descricao { get; set; } = null!;
+        public StatusProjetoEnum StatusProjeto { get; set; }
     }
 }

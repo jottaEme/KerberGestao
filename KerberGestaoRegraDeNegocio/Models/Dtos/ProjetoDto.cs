@@ -6,7 +6,9 @@ namespace KerberGestaoRegraDeNegocio.Models.Dtos
     {
         [JsonProperty("IdProjeto", NullValueHandling = NullValueHandling.Ignore)]
         public int IdProjeto { get; set; }
+        public ClienteSimplificadoDto Cliente { get; set; }
         public string NomeProjeto { get; set; } = null!;
-        public StatusOrdemServicoEnum StatusProjeto { get; set; }
+        public string Descricao { get; set; } = null!;
+        public StatusProjetoEnum StatusProjeto { get; set; }
     }
 }
