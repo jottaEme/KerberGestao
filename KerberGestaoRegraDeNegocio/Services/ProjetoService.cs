@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using KerberGestaoRegraDeNegocio.Models;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
 using KerberGestaoRegraDeNegocio.Models.Entities;
-using KerberGestaoRegraDeNegocio.Repositories;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
 
@@ -52,6 +52,32 @@ namespace KerberGestaoRegraDeNegocio.Services
         {
             var projetoEntity = mapper.Map<Projeto>(projeto);
             projetoRepository.Atualizar(projetoEntity);
+        }
+
+        public List<ProjetoDto> PegarTodosPorStatus(StatusProjetoEnum status)
+        {
+            var projetos = projetoRepository.PegarTodosPorStatus(status);
+            var projetoDto = mapper.Map<List<ProjetoDto>>(projetos);
+            foreach (var projeto in projetos)
+            {
+                var cliente = clienteService.PegarPeloId(projeto.IdCliente);
+                projetoDto.FirstOrDefault(x => x.IdProjeto == projeto.IdProjeto).Cliente
+                    = mapper.Map<ClienteSimplificadoDto>(cliente);
+            }
+            return projetoDto;
+        }
+
+        public List<ProjetoDto> PegarPorNome(string nome)
+        {
+            var projetos = projetoRepository.PegarPorNome(nome);
+            var projetoDto = mapper.Map<List<ProjetoDto>>(projetos);
+            foreach (var projeto in projetos)
+            {
+                var cliente = clienteService.PegarPeloId(projeto.IdCliente);
+                projetoDto.FirstOrDefault(x => x.IdProjeto == projeto.IdProjeto).Cliente
+                    = mapper.Map<ClienteSimplificadoDto>(cliente);
+            }
+            return projetoDto;
         }
     }
 }

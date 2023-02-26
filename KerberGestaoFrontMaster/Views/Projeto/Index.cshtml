@@ -5,7 +5,7 @@
     ViewData["Title"] = "Cadastro de Cliente";
 }
 <head>
-    <link rel="stylesheet" href="~/css/Projeto-Index.css" />
+    <link rel="stylesheet" href="~/css/Duas-Divs-Na-Linha.css" />
 </head>
 @if(TempData["MensagemSucesso"] != null)
 {
@@ -24,53 +24,88 @@
 }
 <br />
 
-<div class="text-center">
-    <h1 class="display-4">PROJETOS</h1>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">PROJETOS</h1>
+        <br />
+    </div>
+    <form asp-controller="Projeto" asp-action="BuscarPorStatus" method="post">
+        <div class="col-xs-8">
+            <div id="duasDivs" class="col-lg-5">
+                <label for="Status">Status:</label>
+                <select class="form-control" id="Status" name="Status">
+                    <option selected>Selecione o Status</option>
+                    <option value="@StatusProjetoEnum.Iniciado">Iniciado</option>
+                    <option value="@StatusProjetoEnum.Impedimento">Impedimento</option>
+                    <option value="@StatusProjetoEnum.Finalizado">Finalizado</option>
+                </select>
+            </div>
+            <div id="duasDivs" class="col-lg-3">
+                <button type="submit" class="btn btn-outline-primary mb-2">Pesquisar por Status</button>
+            </div>
+        </div>
+    </form>
+    <form asp-controller="Projeto" asp-action="BuscarPorNome" method="post">
+        <div class="col-xs-8">
+            <div id="duasDivs" class="col-lg-5">
+                <label for="nome">Nome do Projeto:</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o Nome">
+            </div>
+            <div id="duasDivs" class="col-lg-3">
+                <button type="submit" class="btn btn-outline-primary mb-2">Pesquisar por Nome</button>
+            </div>
+        </div>
+    </form>
+
     <br />
-    @if (Model != null && Model.Any())
-    {
-        foreach (var projeto in Model)
+    <p> </p>
+    <hr width="100%" align="center" />
+    <p> </p>
+    <div class="text-center">
+        @if (Model != null && Model.Any())
         {
-            <font size="5">@projeto.NomeProjeto</font>
-            <br />
-            <font size="3">@projeto.Cliente.NomeCliente</font>
-            if (projeto.StatusProjeto == StatusProjetoEnum.Iniciado)
+            foreach (var projeto in Model)
             {
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <font size="4">@projeto.StatusProjeto</font>
+                <font size="5">@projeto.NomeProjeto</font>
+                <br />
+                <font size="3">@projeto.Cliente.NomeCliente</font>
+                if (projeto.StatusProjeto == StatusProjetoEnum.Iniciado)
+                {
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <font size="4">@projeto.StatusProjeto</font>
+                }
+                if (projeto.StatusProjeto == StatusProjetoEnum.EmAndamento)
+                {
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <font size="4">@projeto.StatusProjeto</font>
+                }
+                if (projeto.StatusProjeto == StatusProjetoEnum.Impedimento)
+                {
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <font size="4">@projeto.StatusProjeto</font>
+                }
+                if (projeto.StatusProjeto == StatusProjetoEnum.Finalizado)
+                {
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <font size="4">@projeto.StatusProjeto</font>
+                }
+                <br />
+                <font size="3">@projeto.Descricao</font>
+                <br />
+                <a role="button" class="btn btn-outline-success" asp-route-id="@projeto.IdProjeto" asp-controller="Projeto" asp-action="Atualizar">Editar</a>
+                <p> </p>
+                <hr width="100%" align="center" />
+                <p> </p>
             }
-            if (projeto.StatusProjeto == StatusProjetoEnum.EmAndamento)
-            {
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <font size="4">@projeto.StatusProjeto</font>
-            }
-            if (projeto.StatusProjeto == StatusProjetoEnum.Impedimento)
-            {
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <font size="4">@projeto.StatusProjeto</font>
-            }
-            if (projeto.StatusProjeto == StatusProjetoEnum.Finalizado)
-            {
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <font size="4">@projeto.StatusProjeto</font>
-            }
-            <br />
-            <font size="3">@projeto.Descricao</font>
-            <br />
-            <a role="button" class="btn btn-outline-success" asp-route-id="@projeto.IdProjeto" asp-controller="Projeto" asp-action="Atualizar">Editar</a>
-            <p> </p>
-            <hr width="100%" align="center" />
-            <p> </p>
-            <br />
-            <br />
         }
-    }
-</div>
+    </div>
+</body>
+

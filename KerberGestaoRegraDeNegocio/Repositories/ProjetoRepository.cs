@@ -1,4 +1,5 @@
 ﻿using KerberGestaoRegraDeNegocio.Data;
+using KerberGestaoRegraDeNegocio.Models;
 using KerberGestaoRegraDeNegocio.Models.Entities;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 
@@ -46,6 +47,16 @@ namespace KerberGestaoRegraDeNegocio.Repositories
             dbContext.SaveChanges();
 
             return projetoNoBanco;
+        }
+
+        public List<Projeto> PegarTodosPorStatus(StatusProjetoEnum status)
+        {
+            return dbContext.Projetos.Where(x => x.StatusProjeto == status).ToList();
+        }
+
+        public List<Projeto> PegarPorNome(string nome)
+        {
+            return dbContext.Projetos.Where(x => x.NomeProjeto == nome).ToList();
         }
     }
 }

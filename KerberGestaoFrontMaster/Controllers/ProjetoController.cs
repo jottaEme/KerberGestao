@@ -1,4 +1,5 @@
 ﻿using KerberGestaoFrontMaster.Filters;
+using KerberGestaoRegraDeNegocio.Models;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
 using KerberGestaoRegraDeNegocio.Services;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
@@ -25,6 +26,20 @@ namespace KerberGestaoFrontMaster.Controllers
         {
             var response = projetoService.PegarPeloId(id);
             return View(response);
+        }
+
+        [HttpPost]
+        public IActionResult BuscarPorStatus(StatusProjetoEnum status)
+        {
+            var response = projetoService.PegarTodosPorStatus(status);
+            return View("Index", response);
+        }
+
+        [HttpPost]
+        public IActionResult BuscarPorNome(string nome)
+        {
+            var response = projetoService.PegarPorNome(nome);
+            return View("Index", response);
         }
 
         [HttpPost]
