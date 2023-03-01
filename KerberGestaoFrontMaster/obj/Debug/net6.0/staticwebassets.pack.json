@@ -13,12 +13,28 @@
       "PackagePath": "staticwebassets\\css\\Projeto-Index.css"
     },
     {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\kerber.jpg",
+      "PackagePath": "staticwebassets\\css\\kerber.jpg"
+    },
+    {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\logo_kerber.jpg",
+      "PackagePath": "staticwebassets\\css\\logo_kerber.jpg"
+    },
+    {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_kerber.jpg",
+      "PackagePath": "staticwebassets\\images\\logo_kerber.jpg"
     },
     {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\js\\site.js",
