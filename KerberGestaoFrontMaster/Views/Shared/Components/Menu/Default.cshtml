@@ -1,8 +1,10 @@
 ﻿@using KerberGestaoRegraDeNegocio.Models.Dtos;
 @using KerberGestaoRegraDeNegocio.Models;
 @model UsuarioDto
-
-<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Olá @Model.Nome</a>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/sistema-geral.css" media="screen" />
+</head>
+<a class="navbar-brand fonteClara" asp-area="" asp-controller="Home" asp-action="Index">Olá @Model.Nome</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,28 +12,28 @@
 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
     <ul class="navbar-nav flex-grow-1">
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="fonteClara nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="OrdemServico" asp-action="Index">Ordem de Serviço</a>
+            <a class="nav-link fonteClara" asp-area="" asp-controller="OrdemServico" asp-action="Index">Ordem de Serviço</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a>
+            <a class="nav-link fonteClara" asp-area="" asp-controller="Cliente" asp-action="Index">Clientes</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="Projeto" asp-action="Index">Projetos</a>
+            <a class="nav-link fonteClara" asp-area="" asp-controller="Projeto" asp-action="Index">Projetos</a>
         </li>
         @if (Model.Perfil == PerfilEnum.Admin)
         {
             <li class="nav-item">
-                <a class="nav-link text-white" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
+                <a class="nav-link fonteClara" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
             </li>
         }
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar Senha</a>
+            <a class="nav-link fonteClara" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar Senha</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            <a class="nav-link fonteClara" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
         </li>
     </ul>
 </div>

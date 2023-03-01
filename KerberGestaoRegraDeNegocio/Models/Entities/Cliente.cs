@@ -14,6 +14,6 @@ namespace KerberGestaoRegraDeNegocio.Models.Entities
         public string EstadoCliente { get; set; } = null!;
         public string? TelefoneCliente { get; set; }
         public string? CelularCliente { get; set; }
-        public string StatusCliente { get; set; } = null!;
+        public StatusClienteEnum Status { get; set; }
     }
 }

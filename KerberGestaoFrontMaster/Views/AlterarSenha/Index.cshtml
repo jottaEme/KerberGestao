@@ -39,7 +39,7 @@
         <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" placeholder="Digite a confirmação da nova senha">
         @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha)
     </div>
-    
+    <br />
     <button type="submit" class="btn btn-outline-success btn-block">Alterar</button>
     <a class="btn btn-outline-dark btn-block" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
 </form>

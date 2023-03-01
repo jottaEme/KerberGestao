@@ -23,6 +23,6 @@ namespace KerberGestaoRegraDeNegocio.Models.Dtos
         [Phone(ErrorMessage = "O telefone informado não é válido!")]
         public string? CelularCliente { get; set; }
         [Required(ErrorMessage = "Digite o Status do Cliente")]
-        public string StatusCliente { get; set; } = null!;
+        public StatusClienteEnum Status { get; set; }
     }
 }

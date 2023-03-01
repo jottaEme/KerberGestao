@@ -49,7 +49,7 @@ namespace KerberGestaoRegraDeNegocio.Repositories
             clienteNoBanco.EstadoCliente = cliente.EstadoCliente;
             clienteNoBanco.TelefoneCliente = cliente.TelefoneCliente;
             clienteNoBanco.CelularCliente = cliente.CpfCliente;
-            clienteNoBanco.StatusCliente = cliente.StatusCliente;
+            clienteNoBanco.Status = cliente.Status;
 
             dbContext.Clientes.Update(clienteNoBanco);
             dbContext.SaveChanges();

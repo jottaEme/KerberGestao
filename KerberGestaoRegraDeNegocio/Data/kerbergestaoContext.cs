@@ -68,9 +68,9 @@ namespace KerberGestaoRegraDeNegocio.Data
                     .HasMaxLength(45)
                     .HasColumnName("nomeCliente");
 
-                entity.Property(e => e.StatusCliente)
+                entity.Property(e => e.Status)
                     .HasMaxLength(45)
-                    .HasColumnName("statusCliente");
+                    .HasColumnName("status");
 
                 entity.Property(e => e.TelefoneCliente).HasColumnName("telefoneCliente");
             });

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e6XZ685kZkyEHioxRf0WI7+oZdHa53CIebD6ZKXjrHA=",
+  "Hash": "EXLuZTjW6/zqEuI57S9xxPcsqtFwT2j32XmG2V2XLRc=",
   "Source": "KerberGestaoFrontMaster",
   "BasePath": "_content/KerberGestaoFrontMaster",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\logo_kerber.jpg"
+    },
+    {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\sistema-geral.css",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "css/sistema-geral.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\sistema-geral.css"
     },
     {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\site.css",
