@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EXLuZTjW6/zqEuI57S9xxPcsqtFwT2j32XmG2V2XLRc=",
+  "Hash": "+ZYP7EGorTX23bVmHcT5YjCBe0P+e1+/4Zf9EEinOeU=",
   "Source": "KerberGestaoFrontMaster",
   "BasePath": "_content/KerberGestaoFrontMaster",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\css\\logo_kerber.jpg"
     },
     {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\logo_kerber_fundo_escuro.jpg",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "css/logo_kerber_fundo_escuro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\logo_kerber_fundo_escuro.jpg"
+    },
+    {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\sistema-geral.css",
       "SourceId": "KerberGestaoFrontMaster",
       "SourceType": "Discovered",
@@ -185,6 +202,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_clara.png",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "images/logo_clara.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo_clara.png"
+    },
+    {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_escura.png",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "images/logo_escura.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo_escura.png"
     },
     {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_kerber.jpg",

@@ -24,7 +24,7 @@ namespace KerberGestaoRegraDeNegocio.Helper
 
         public void CriarSessaoDoUsuario(UsuarioDto usuario)
         {
-            var valor = Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(usuario));
+            var valor = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(usuario));
             httpContext.HttpContext.Session.Set("sessaoUsuarioLogado", valor);
         }
 

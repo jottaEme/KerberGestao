@@ -7,6 +7,6 @@ namespace KerberGestaoRegraDeNegocio.Models.Entities
     {
         public int IdOrcamentos { get; set; }
         public string NomeOrcamento { get; set; } = null!;
-        public int StatusOrcamento { get; set; }
+        public StatusOrcamentoEnum StatusOrcamento { get; set; }
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - KerberGestaoFrontMaster</title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/KerberGestaoFrontMaster.styles.css" asp-append-version="true" />
@@ -13,9 +13,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 fundoEscuroPadrao">
+        <nav class="navbar navbar-expand-lg navbar-dark fundoEscuroPadrao">
             <div class="container-fluid">
-                @await Component.InvokeAsync("Menu");
+                @await Component.InvokeAsync("Menu")
             </div>
         </nav>
     </header>
@@ -23,11 +23,9 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - KerberGestaoFrontMaster - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Kerber Móveis Planejados - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

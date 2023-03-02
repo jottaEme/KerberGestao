@@ -1,12 +1,25 @@
 ﻿.fundoEscuroPadrao {
     /* fallback for old browsers */
-    background: #fccb90;
+    background: #312e3e;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #312e3e, #4a4856, #4a4856, #312e3e);
+    background: -webkit-linear-gradient(to right, #312e3e, #403d4b, #403d4b, #312e3e);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #312e3e, #4a4856, #4a4856, #312e3e);
+    background: linear-gradient(to right, #312e3e, #403d4b, #403d4b, #312e3e);
 }
 
 .fonteClara {
     color: #fccb90;
+}
+
+.fonteEscura {
+    color: #312e3e;
+}
+
+.fundoClaro {
+    /* fallback for old browsers */
+    background: #fccb90;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #fccb90, #fad6ac, #fad6ac, #fccb90);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #fccb90, #fad6ac, #fad6ac, #fccb90);
 }

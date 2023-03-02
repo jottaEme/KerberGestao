@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
+using KerberGestaoRegraDeNegocio.Models.Entities;
 using KerberGestaoRegraDeNegocio.Repositories;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
@@ -27,6 +28,18 @@ namespace KerberGestaoRegraDeNegocio.Services
         {
             var orcamentoEntity = orcamentoRepository.PegarPeloId(id);
             return mapper.Map<OrcamentoDto>(orcamentoEntity);
+        }
+
+        public void Criar(OrcamentoDto orcamento)
+        {
+            var orcamentoEntity = mapper.Map<Orcamento>(orcamento);
+            orcamentoRepository.Criar(orcamentoEntity);
+        }
+
+        public void Atualizar(OrcamentoDto orcamento)
+        {
+            var orcamentoEntity = mapper.Map<Orcamento>(orcamento);
+            orcamentoRepository.Atualizar(orcamentoEntity);
         }
     }
 }

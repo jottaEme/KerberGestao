@@ -22,5 +22,29 @@ namespace KerberGestaoRegraDeNegocio.Repositories
         {
             return dbContext.Orcamentos.FirstOrDefault(x => x.IdOrcamentos == id);
         }
+
+        public Orcamento Criar(Orcamento orcamento)
+        {
+            dbContext.Orcamentos.Add(orcamento);
+            dbContext.SaveChanges();
+            return orcamento;
+        }
+
+        public Orcamento Atualizar(Orcamento orcamento)
+        {
+            Orcamento orcamentoNoBanco = PegarPeloId(orcamento.IdOrcamentos);
+
+            if (orcamentoNoBanco == null)
+            {
+                throw new System.Exception("Houve um erro na atualização do Cliente");
+            }
+
+            orcamentoNoBanco.StatusOrcamento = orcamento.StatusOrcamento;
+
+            dbContext.Orcamentos.Update(orcamentoNoBanco);
+            dbContext.SaveChanges();
+
+            return orcamentoNoBanco;
+        }
     }
 }

@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Cadastro de Cliente";
 }
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/sistema-geral.css" />
+</head>
 
 @if(TempData["MensagemSucesso"] != null)
 {
@@ -19,59 +23,62 @@
         @TempData["MensagemErro"]
     </div>
 }
-<br />
-
-<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-    <a class="btn btn-outline-success" role="button" asp-controller="Cliente" asp-action="Criar">Cadastrar Cliente</a>
-</div>
-<br />
-
-<div class="text-center">
-    <h1 class="display-4">Lista de Clientes</h1>
+<body class="fonteEscura">
     <br />
-    <table class="table" id="table-clientes">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Cpf</th>
-                <th scope="col">End</th>
-                <th scope="col">Bairro</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Celular</th>
-                <th scope="col">Status</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model != null && Model.Any())
-            {
-                foreach (var cliente in Model)
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-outline-success" role="button" asp-controller="Cliente" asp-action="Criar">Cadastrar Cliente</a>
+    </div>
+    <br />
+
+    <div class="text-center">
+        <h1 class="display-4 fonteEscura">Lista de Clientes</h1>
+        <br />
+        <table class="table" id="table-clientes">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cpf</th>
+                    <th scope="col">End</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
                 {
-                    <tr>
-                        <th scope="row">@cliente.IdCliente</th>
-                        <td>@cliente.NomeCliente</td>
-                        <td>@cliente.CpfCliente</td>
-                        <td>@cliente.EnderecoCliente</td>
-                        <td>@cliente.BairroCliente</td>
-                        <td>@cliente.CidadeCliente</td>
-                        <td>@cliente.EstadoCliente</td>
-                        <td>@cliente.TelefoneCliente</td>
-                        <td>@cliente.CelularCliente</td>
-                        <td>@cliente.Status</td>
-                        <td>
-                            <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-outline-success" asp-route-id="@cliente.IdCliente" asp-controller="Cliente" asp-action="Atualizar">Editar</a>
-                            </div>
-                        </td>
-                    </tr>
+                    foreach (var cliente in Model)
+                    {
+                        <tr>
+                            <th scope="row">@cliente.IdCliente</th>
+                            <td>@cliente.NomeCliente</td>
+                            <td>@cliente.CpfCliente</td>
+                            <td>@cliente.EnderecoCliente</td>
+                            <td>@cliente.BairroCliente</td>
+                            <td>@cliente.CidadeCliente</td>
+                            <td>@cliente.EstadoCliente</td>
+                            <td>@cliente.TelefoneCliente</td>
+                            <td>@cliente.CelularCliente</td>
+                            <td>@cliente.Status</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a role="button" class="btn btn-outline-success" asp-route-id="@cliente.IdCliente" asp-controller="Cliente" asp-action="Atualizar">Editar</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
                 }
-            }
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
+</body>
+
 
 
 

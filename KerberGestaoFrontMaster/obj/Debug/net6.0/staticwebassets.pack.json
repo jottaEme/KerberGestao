@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\logo_kerber.jpg"
     },
     {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\logo_kerber_fundo_escuro.jpg",
+      "PackagePath": "staticwebassets\\css\\logo_kerber_fundo_escuro.jpg"
+    },
+    {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\sistema-geral.css",
       "PackagePath": "staticwebassets\\css\\sistema-geral.css"
     },
@@ -35,6 +39,14 @@
     {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_clara.png",
+      "PackagePath": "staticwebassets\\images\\logo_clara.png"
+    },
+    {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_escura.png",
+      "PackagePath": "staticwebassets\\images\\logo_escura.png"
     },
     {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\images\\logo_kerber.jpg",

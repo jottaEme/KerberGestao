@@ -6,5 +6,7 @@ namespace KerberGestaoRegraDeNegocio.Repositories.Interface
     {
         List<Orcamento> PegarTodos();
         Orcamento PegarPeloId(int id);
+        Orcamento Criar(Orcamento orcamento);
+        Orcamento Atualizar(Orcamento orcamento);
     }
 }

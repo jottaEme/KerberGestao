@@ -6,5 +6,7 @@ namespace KerberGestaoRegraDeNegocio.Services.Interfaces
     {
         List<OrcamentoDto> PegarTodos();
         OrcamentoDto PegarPeloId(int id);
+        void Criar(OrcamentoDto orcamento);
+        void Atualizar(OrcamentoDto orcamento);
     }
 }
