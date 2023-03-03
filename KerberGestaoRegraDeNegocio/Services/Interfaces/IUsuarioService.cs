@@ -1,5 +1,4 @@
 ﻿using KerberGestaoRegraDeNegocio.Models.Dtos;
-using KerberGestaoRegraDeNegocio.Models.Entities;
 
 namespace KerberGestaoRegraDeNegocio.Services.Interfaces
 {
@@ -12,5 +11,6 @@ namespace KerberGestaoRegraDeNegocio.Services.Interfaces
         bool EnviarEmailDeTrocaDeSenha(string email, string login);
         void Atualizar(UsuarioDto usuario);
         void AlterarSenha(AlterarSenhaDto alterarSenha);
+        void ExcluirPorId(int id);
     }
 }

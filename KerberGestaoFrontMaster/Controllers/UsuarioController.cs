@@ -1,5 +1,6 @@
 ﻿using KerberGestaoFrontMaster.Filters;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
+using KerberGestaoRegraDeNegocio.Models.Entities;
 using KerberGestaoRegraDeNegocio.Services;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,26 @@ namespace KerberGestaoFrontMaster.Controllers
         public IActionResult Criar()
         {
             return View();
+        }
+
+        public IActionResult ConfirmeExclusao(int id)
+        {
+            return View(id);
+        }
+
+        public IActionResult Excluir(int id)
+        {
+            try
+            {
+                usuarioService.ExcluirPorId(id);
+                TempData["MensagemSucesso"] = $"Usuário {id} excluído do sistema";
+                return RedirectToAction("Index");
+            }
+            catch(Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível excluir o Usuário. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]

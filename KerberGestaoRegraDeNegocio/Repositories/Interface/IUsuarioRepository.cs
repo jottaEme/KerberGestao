@@ -11,5 +11,6 @@ namespace KerberGestaoRegraDeNegocio.Repositories.Interface
         Usuario BuscarPeloId(int id);
         Usuario Atualizar(Usuario usuario);
         Usuario AlterarSenha(Usuario usuario);
+        void ExcluirPorId(int id);
     }
 }

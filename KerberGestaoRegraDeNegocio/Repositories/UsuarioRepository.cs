@@ -1,6 +1,7 @@
 ﻿using KerberGestaoRegraDeNegocio.Data;
 using KerberGestaoRegraDeNegocio.Models.Entities;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace KerberGestaoRegraDeNegocio.Repositories
 {
@@ -25,6 +26,18 @@ namespace KerberGestaoRegraDeNegocio.Repositories
             dbContext.Usuarios.Add(usuario);
             dbContext.SaveChanges();
             return usuario;
+        }
+
+        public void ExcluirPorId(int id)
+        {
+            Usuario usuarioDb = BuscarPeloId(id);
+
+            if (usuarioDb == null)
+            {
+                throw new System.Exception("Usuário não localizado");
+            }
+            dbContext.Usuarios.Remove(usuarioDb);
+            dbContext.SaveChanges();
         }
 
         public Usuario BuscarPeloId(int id)

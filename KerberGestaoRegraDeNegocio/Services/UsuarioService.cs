@@ -44,6 +44,11 @@ namespace KerberGestaoRegraDeNegocio.Services
             usuarioRepository.Atualizar(usuarioEntity);
         }
 
+        public void ExcluirPorId(int id)
+        {
+            usuarioRepository.ExcluirPorId(id);
+        }
+
         public UsuarioDto FazerLogin(LoginDto loginEfetuado)
         {
             var usuarioEncontrado = usuarioRepository.BuscarPorLogin(loginEfetuado.LoginUsuario);
