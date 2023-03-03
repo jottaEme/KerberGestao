@@ -20,11 +20,13 @@ namespace KerberGestaoRegraDeNegocio.Models.Dtos
         [Required(ErrorMessage = "Perfil precisa ser selecionado")]
         public PerfilEnum Perfil { get; set; }
 
-        [Required(ErrorMessage = "Digite a senha")]
-        public string Senha { get; set; }
+        [JsonProperty("Senha", NullValueHandling = NullValueHandling.Ignore)]
+        public string? Senha { get; set; }
 
+        [JsonProperty("DataCadastro", NullValueHandling = NullValueHandling.Ignore)]
         public DateTime DataCadastro { get; set; }
 
+        [JsonProperty("DataAtualizacao", NullValueHandling = NullValueHandling.Ignore)]
         public DateTime? DataAtualizacao { get; set; }
     }
 }

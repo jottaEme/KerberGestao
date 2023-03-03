@@ -48,6 +48,33 @@ namespace KerberGestaoFrontMaster.Controllers
             }
         }
 
+        public IActionResult Atualizar(int id)
+        {
+            var response = usuarioService.PegarPeloId(id);
+            return View(response);
+        }
+
+        [HttpPost]
+        public IActionResult Atualizar(UsuarioDto usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    usuarioService.Atualizar(usuario);
+                    TempData["MensagemSucesso"] = $"Usuário {usuario.Nome} atualizado com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View(usuario);
+            }
+            catch (Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível atualizado o Usuário. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
         [HttpPost]
         public IActionResult Criar(UsuarioDto usuario)
         {
