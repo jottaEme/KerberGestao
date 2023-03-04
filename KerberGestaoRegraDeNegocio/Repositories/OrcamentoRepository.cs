@@ -18,6 +18,11 @@ namespace KerberGestaoRegraDeNegocio.Repositories
             return dbContext.Orcamentos.ToList();
         }
 
+        public List<Orcamento> PegarTodosAtivos()
+        {
+            return dbContext.Orcamentos.Where(x => x.StatusOrcamento != Models.StatusOrcamentoEnum.Finalizado).ToList();
+        }
+
         public Orcamento PegarPeloId(int id)
         {
             return dbContext.Orcamentos.FirstOrDefault(x => x.IdOrcamentos == id);

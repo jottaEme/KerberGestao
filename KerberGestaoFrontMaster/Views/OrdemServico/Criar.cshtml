@@ -18,7 +18,7 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="IdOrcamento">Orcamentos:</label>
+            <label for="IdOrcamento">Orcamentos Ativos</label>
             <select class="form-control" id="IdOrcamento" name="IdOrcamento">
                 <option selected>Escolha</option>
                 @foreach (var orcamentos in Model.Orcamentos)
@@ -28,7 +28,7 @@
             </select>
         </div>
         <div class="form-group col-md-6">
-            <label for="IdCliente">Clientes:</label>
+            <label for="IdCliente">Clientes Ativos</label>
             <select class="form-control" id="IdCliente" name="IdCliente">
                 <option selected>Escolha</option>
                 @foreach (var clientes in Model.Clientes)
@@ -38,7 +38,7 @@
             </select>
         </div>
         <div class="form-group col-md-6">
-            <label for="Status">Status:</label>
+            <label for="Status">Status</label>
             <select class="form-control" id="Status" name="Status">
                 <option selected>Escolha</option>
                 <option value="@StatusOrdemServicoEnum.Iniciado">Iniciado</option>

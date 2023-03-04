@@ -22,8 +22,8 @@ namespace KerberGestaoFrontMaster.Controllers
 
         public IActionResult Criar()
         {
-            var orcamentos = orcamentoService.PegarTodos();
-            var clientes = clienteService.PegarTodos();
+            var orcamentos = orcamentoService.PegarTodosAtivos();
+            var clientes = clienteService.PegarTodosAtivos();
             var ordemServicoOpcoes = new OrdemServicoOpcoesDto()
             {
                 Clientes = clientes,

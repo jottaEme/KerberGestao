@@ -24,6 +24,12 @@ namespace KerberGestaoRegraDeNegocio.Services
             return mapper.Map<List<OrcamentoDto>>(orcamentos);
         }
 
+        public List<OrcamentoDto> PegarTodosAtivos()
+        {
+            var orcamentos = orcamentoRepository.PegarTodosAtivos();
+            return mapper.Map<List<OrcamentoDto>>(orcamentos);
+        }
+
         public OrcamentoDto PegarPeloId(int id)
         {
             var orcamentoEntity = orcamentoRepository.PegarPeloId(id);

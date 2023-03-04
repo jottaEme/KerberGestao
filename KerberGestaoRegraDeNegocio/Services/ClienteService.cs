@@ -24,6 +24,12 @@ namespace KerberGestaoRegraDeNegocio.Services
             return mapper.Map<List<ClienteDto>>(clientes);
         }
 
+        public List<ClienteDto> PegarTodosAtivos()
+        {
+            var clientes = clienteRepository.PegarTodosAtivos();
+            return mapper.Map<List<ClienteDto>>(clientes);
+        }
+
         public void Criar(ClienteDto cliente)
         {
             var clienteEntity = mapper.Map<Cliente>(cliente);

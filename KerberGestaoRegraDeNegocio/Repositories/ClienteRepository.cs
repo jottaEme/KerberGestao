@@ -20,6 +20,11 @@ namespace KerberGestaoRegraDeNegocio.Repositories
             return dbContext.Clientes.ToList();
         }
 
+        public List<Cliente> PegarTodosAtivos()
+        {
+            return dbContext.Clientes.Where(x => x.Status == Models.StatusClienteEnum.Ativo).ToList();
+        }
+
         public Cliente Criar(Cliente cliente)
         {
             dbContext.Clientes.Add(cliente);
