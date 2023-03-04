@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="~/css/sistema-geral.css" />
 </head>
 
-@if(TempData["MensagemSucesso"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        <button type="button" class="btn btn-outline-danger btn-sm close-alert" arial-label="Close">x</button>
-        @TempData["MensagemSucesso"]
-    </div>
-}
-
-@if (TempData["MensagemErro"] != null)
-{
-    <div class="alert alert-danger" role="alert">
-        <button type="button" class="btn btn-outline-danger btn-sm close-alert" arial-label="Close">x</button>
-        @TempData["MensagemErro"]
-    </div>
-}
 <body class="fonteEscura">
+    <br />
+    <br />
+    @if(TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-outline-danger btn-sm close-alert" arial-label="Close">x</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-outline-danger btn-sm close-alert" arial-label="Close">x</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
     <br />
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
