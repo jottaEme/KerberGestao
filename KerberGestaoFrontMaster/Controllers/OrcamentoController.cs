@@ -17,17 +17,32 @@ namespace KerberGestaoFrontMaster.Controllers
 
         public IActionResult Index()
         {
-            var response = orcamentoService.PegarTodos();
-            return View(response);
+            try
+            {
+                var response = orcamentoService.PegarTodos();
+                return View(response);
+            }catch(Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível abrir tela de Orçamento. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public IActionResult Criar()
         {
-            return View();
+            try
+            {
+                return View();
+            }
+            catch(Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível abrir tela de Criação. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
-        public IActionResult Criar(OrcamentoDto orcamento)
+        public IActionResult CriarNoBanco(OrcamentoDto orcamento)
         {
 
             try
@@ -35,7 +50,7 @@ namespace KerberGestaoFrontMaster.Controllers
                 if (ModelState.IsValid)
                 {
                     orcamentoService.Criar(orcamento);
-                    TempData["MensagemSucesso"] = $"Orçamento {orcamento.IdOrcamentos} cadastrado com sucesso";
+                    TempData["MensagemSucesso"] = $"Orçamento {orcamento.NomeOrcamento} cadastrado com sucesso";
                     return RedirectToAction("Index");
                 }
 
@@ -51,8 +66,16 @@ namespace KerberGestaoFrontMaster.Controllers
 
         public IActionResult Atualizar(int id)
         {
-            var response = orcamentoService.PegarPeloId(id);
-            return View(response);
+            try
+            {
+                var response = orcamentoService.PegarPeloId(id);
+                return View(response);
+            }
+            catch(Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível abrir tela de atualização. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
@@ -63,7 +86,7 @@ namespace KerberGestaoFrontMaster.Controllers
                 if (ModelState.IsValid)
                 {
                     orcamentoService.Atualizar(orcamento);
-                    TempData["MensagemSucesso"] = $"Orçamento {orcamento.IdOrcamentos} alterado com sucesso";
+                    TempData["MensagemSucesso"] = $"Orçamento {orcamento.NomeOrcamento} alterado com sucesso";
                     return RedirectToAction("Index");
                 }
 
