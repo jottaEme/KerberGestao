@@ -1,0 +1,60 @@
+﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
+@using KerberGestaoRegraDeNegocio.Models;
+@model ProjetoOpcoesDto
+@{
+    ViewData["Title"] = "Cadastrar Novo Projeto";
+}
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Duas-Divs-Na-Linha.css" />
+</head>
+<body>
+    <br />
+    <br />
+    <div class="text-center">
+
+        <h1 class="display-4">Cadastrar Novo Projeto</h1>
+
+    </div>
+
+    <form asp-controller="Projeto" asp-action="CriarNoBanco" method="post">
+        <div class="form-group">
+            <label for="NomeProjeto">Nome</label>
+            <input type="text" asp-for="NomeProjeto" class="form-control" placeholder="Digite o Nome">
+            @Html.ValidationMessageFor(x => x.NomeProjeto)
+        </div>
+        <div class="form-group">
+            <label for="Descricao">Descrição</label>
+            <input type="text" asp-for="Descricao" class="form-control" placeholder="Descrição">
+            @Html.ValidationMessageFor(x => x.Descricao)
+        </div>
+        <div class="col-xs-10">
+            <div class="form-group col-lg-5" id="duasDivs">
+                <label for="IdCliente">Clientes Ativos</label>
+                <select class="form-control" id="IdCliente" name="IdCliente">
+                    <option selected>Escolha</option>
+                    @foreach (var clientes in Model.Clientes)
+                    {
+                        <option value="@clientes.IdCliente">@clientes.NomeCliente</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-lg-5" id="duasDivs">
+                <label for="StatusProjeto">Status</label>
+                <select class="form-control" id="StatusProjeto" name="StatusProjeto">
+                    <option selected>@StatusProjetoEnum.Iniciado</option>
+                    <option value="@StatusProjetoEnum.EmAndamento">EmAndamento</option>
+                    <option value="@StatusProjetoEnum.Impedimento">Impedimento</option>
+                    <option value="@StatusProjetoEnum.Finalizado">Finalizado</option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-success btn-block">Cadastrar</button>
+        <a class="btn btn-outline-dark btn-block" asp-controller="Projeto" asp-action="Index" role="button">Voltar</a>
+    </form>
+</body>
+
+
+
+

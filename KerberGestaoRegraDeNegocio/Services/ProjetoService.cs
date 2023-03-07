@@ -33,7 +33,7 @@ namespace KerberGestaoRegraDeNegocio.Services
             return projetoDto;
         }
 
-        public void Criar(ProjetoDto projeto)
+        public void Criar(ProjetoOpcoesDto projeto)
         {
             var projetoEntity = mapper.Map<Projeto>(projeto);
             projetoRepository.Criar(projetoEntity);

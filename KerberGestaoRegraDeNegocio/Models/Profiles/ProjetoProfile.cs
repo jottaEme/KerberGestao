@@ -10,6 +10,9 @@ namespace KerberGestaoRegraDeNegocio.Models.Profiles
         {
             CreateMap<Projeto, ProjetoDto>()
                 .ReverseMap();
+
+            CreateMap<ProjetoOpcoesDto, Projeto>()
+               .ReverseMap();
         }
     }
 }

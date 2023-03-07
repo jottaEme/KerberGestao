@@ -11,10 +11,22 @@ namespace KerberGestaoFrontMaster.Controllers
     public class ProjetoController : Controller
     {
         private readonly IProjetoService projetoService;
+        private readonly IClienteService clienteService;
 
-        public ProjetoController(IProjetoService projetoService)
+        public ProjetoController(IProjetoService projetoService, IClienteService clienteService)
         {
             this.projetoService = projetoService;
+            this.clienteService = clienteService;
+        }
+
+        public IActionResult Criar()
+        {
+            var clientes = clienteService.PegarTodosAtivos();
+            var projetoOpcoes = new ProjetoOpcoesDto()
+            {
+                Clientes = clientes
+            };
+            return View(projetoOpcoes);
         }
 
         public IActionResult Index()
@@ -61,6 +73,26 @@ namespace KerberGestaoFrontMaster.Controllers
                 TempData["MensagemErro"] = $"Não foi possível alterar o Projeto. Detalhe do erro: {e.Message}";
                 return RedirectToAction("Index");
             }
+        }
+
+        [HttpPost]
+        public IActionResult CriarNoBanco(ProjetoOpcoesDto projeto)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    projetoService.Criar(projeto);
+                    TempData["MensagemSucesso"] = $"Projeto {projeto.NomeProjeto} criado com sucesso";
+                    return RedirectToAction("Index");
+                }
+                return RedirectToAction("Index");
+            }catch(Exception e)
+            {
+                TempData["MensagemErro"] = $"Não foi possível criar o Projeto. Detalhe do erro: {e.Message}";
+                return RedirectToAction("Index");
+            }
+            
         }
     }
 }
