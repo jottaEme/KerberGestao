@@ -1,12 +1,12 @@
+C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.deps.json
+C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.runtimeconfig.json
+C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.dll
+C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.pdb
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.csproj.AssemblyReference.cache
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.GeneratedMSBuildEditorConfig.editorconfig
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.AssemblyInfoInputs.cache
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.AssemblyInfo.cs
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.csproj.CoreCompileInputs.cache
-C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.deps.json
-C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.runtimeconfig.json
-C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.dll
-C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\bin\Debug\net6.0\KerberGestaoRegraDeNegocio.pdb
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.dll
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\refint\KerberGestaoRegraDeNegocio.dll
 C:\Fontes\KerberGestao\KerberGestaoRegraDeNegocio\obj\Debug\net6.0\KerberGestaoRegraDeNegocio.pdb
