@@ -1,5 +1,5 @@
-﻿using KerberGestaoRegraDeNegocio.Models;
-using KerberGestaoRegraDeNegocio.Models.Dtos;
+﻿using KerberGestaoRegraDeNegocio.Models.Dtos;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 
 namespace KerberGestaoRegraDeNegocio.Services.Interfaces
 {

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using KerberGestaoRegraDeNegocio.Models.Enums;
+using Newtonsoft.Json;
 
 namespace KerberGestaoRegraDeNegocio.Models.Dtos
 {

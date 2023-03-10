@@ -1,5 +1,6 @@
 ﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
 @using KerberGestaoRegraDeNegocio.Models;
+@using KerberGestaoRegraDeNegocio.Models.Enums;
 @model OrdemServicoComNomesDto
 @{
     ViewData["Title"] = "Atualizar Ordem de Serviço";
@@ -58,15 +59,15 @@
             <label for="Status">Status:</label>
             <select class="form-control" id="Status" name="Status">
                 <option selected>@Model.Status</option>
-                <option value="@StatusOrdemServicoEnum.Iniciado">Iniciado</option>
-                <option value="@StatusOrdemServicoEnum.Impedimento">Impedimento</option>
+                <option value="@StatusOrdemServicoEnum.EmProducao">Em Produção</option>
+                <option value="@StatusOrdemServicoEnum.Montagem">Montagem</option>
                 <option value="@StatusOrdemServicoEnum.Finalizado">Finalizado</option>
             </select>
         </div>
         <br />
         <br />
         <button type="submit" class="btn btn-outline-success btn-block">Alterar</button>
-        <a class="btn btn-outline-dark btn-block" asp-controller="OrdemServico" asp-action="Dashboard" role="button">Voltar</a>
+        <a class="btn btn-outline-dark btn-block" asp-controller="OrdemServico" asp-action="Index" role="button">Voltar</a>
     </form>
 </body>
 

@@ -1,5 +1,6 @@
 ﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
 @using KerberGestaoRegraDeNegocio.Models;
+@using KerberGestaoRegraDeNegocio.Models.Enums;
 @model OrcamentoDto
 @{
     ViewData["Title"] = "Atualizar Orçamento";
@@ -25,8 +26,8 @@
             <label for="StatusOrcamento">Status</label>
             <select class="form-control" id="StatusOrcamento" name="StatusOrcamento">
                 <option selected>@Model.StatusOrcamento</option>
-                <option value="@StatusOrcamentoEnum.Iniciado">Iniciado</option>
-                <option value="@StatusOrcamentoEnum.Impedimento">Impedimento</option>
+                <option value="@StatusOrcamentoEnum.Aguardando">Aguardando</option>
+                <option value="@StatusOrcamentoEnum.ListagemDeMaterial">Listagem de Material</option>
                 <option value="@StatusOrcamentoEnum.Finalizado">Finalizado</option>
             </select>
         </div>

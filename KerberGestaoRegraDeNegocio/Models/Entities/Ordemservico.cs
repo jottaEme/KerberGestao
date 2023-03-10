@@ -1,4 +1,6 @@
-﻿namespace KerberGestaoRegraDeNegocio.Models.Entities;
+﻿using KerberGestaoRegraDeNegocio.Models.Enums;
+
+namespace KerberGestaoRegraDeNegocio.Models.Entities;
 
 public partial class Ordemservico
 {

@@ -1,5 +1,6 @@
 ﻿using KerberGestaoRegraDeNegocio.Data;
 using KerberGestaoRegraDeNegocio.Models.Entities;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 
 namespace KerberGestaoRegraDeNegocio.Repositories
@@ -20,7 +21,7 @@ namespace KerberGestaoRegraDeNegocio.Repositories
 
         public List<Orcamento> PegarTodosAtivos()
         {
-            return dbContext.Orcamentos.Where(x => x.StatusOrcamento != Models.StatusOrcamentoEnum.Finalizado).ToList();
+            return dbContext.Orcamentos.Where(x => x.StatusOrcamento != StatusOrcamentoEnum.Finalizado).ToList();
         }
 
         public Orcamento PegarPeloId(int id)

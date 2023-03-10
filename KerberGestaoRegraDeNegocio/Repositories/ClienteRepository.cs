@@ -1,6 +1,7 @@
 ﻿using Castle.Core.Resource;
 using KerberGestaoRegraDeNegocio.Data;
 using KerberGestaoRegraDeNegocio.Models.Entities;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,7 +23,7 @@ namespace KerberGestaoRegraDeNegocio.Repositories
 
         public List<Cliente> PegarTodosAtivos()
         {
-            return dbContext.Clientes.Where(x => x.Status == Models.StatusClienteEnum.Ativo).ToList();
+            return dbContext.Clientes.Where(x => x.Status == StatusClienteEnum.Ativo).ToList();
         }
 
         public Cliente Criar(Cliente cliente)

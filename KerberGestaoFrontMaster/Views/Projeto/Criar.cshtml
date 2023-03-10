@@ -1,5 +1,6 @@
 ﻿@using KerberGestaoRegraDeNegocio.Models.Dtos
 @using KerberGestaoRegraDeNegocio.Models;
+@using KerberGestaoRegraDeNegocio.Models.Enums;
 @model ProjetoOpcoesDto
 @{
     ViewData["Title"] = "Cadastrar Novo Projeto";
@@ -42,9 +43,8 @@
             <div class="form-group col-lg-5" id="duasDivs">
                 <label for="StatusProjeto">Status</label>
                 <select class="form-control" id="StatusProjeto" name="StatusProjeto">
-                    <option selected>@StatusProjetoEnum.Iniciado</option>
-                    <option value="@StatusProjetoEnum.EmAndamento">EmAndamento</option>
-                    <option value="@StatusProjetoEnum.Impedimento">Impedimento</option>
+                    <option selected>@StatusProjetoEnum.Aguardando</option>
+                    <option value="@StatusProjetoEnum.EmExecucao">Em Execução</option>
                     <option value="@StatusProjetoEnum.Finalizado">Finalizado</option>
                 </select>
             </div>

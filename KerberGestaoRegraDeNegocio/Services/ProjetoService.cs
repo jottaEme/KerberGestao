@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using KerberGestaoRegraDeNegocio.Models;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
 using KerberGestaoRegraDeNegocio.Models.Entities;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
 

@@ -1,6 +1,6 @@
 ﻿using KerberGestaoFrontMaster.Filters;
-using KerberGestaoRegraDeNegocio.Models;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 using KerberGestaoRegraDeNegocio.Services;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;

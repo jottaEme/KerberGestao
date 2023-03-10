@@ -1,6 +1,6 @@
-﻿using KerberGestaoRegraDeNegocio.Models;
-using KerberGestaoRegraDeNegocio.Models.Dtos;
+﻿using KerberGestaoRegraDeNegocio.Models.Dtos;
 using KerberGestaoRegraDeNegocio.Models.Entities;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 
 namespace KerberGestaoRegraDeNegocio.Repositories.Interface
 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 
 namespace KerberGestaoRegraDeNegocio.Models.Entities
 {

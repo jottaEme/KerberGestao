@@ -1,4 +1,6 @@
-﻿namespace KerberGestaoRegraDeNegocio.Models.Dtos
+﻿using KerberGestaoRegraDeNegocio.Models.Enums;
+
+namespace KerberGestaoRegraDeNegocio.Models.Dtos
 {
     public class OrdemServicoOpcoesDto
     {

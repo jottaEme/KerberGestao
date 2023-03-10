@@ -1,4 +1,5 @@
 ﻿using KerberGestaoRegraDeNegocio.Helper;
+using KerberGestaoRegraDeNegocio.Models.Enums;
 
 namespace KerberGestaoRegraDeNegocio.Models.Entities
 {
