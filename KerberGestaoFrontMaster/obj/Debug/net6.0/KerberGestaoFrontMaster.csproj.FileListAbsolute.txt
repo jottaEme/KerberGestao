@@ -62,3 +62,8 @@ C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\refint\KerberGes
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.pdb
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\KerberGestaoFrontMaster.genruntimeconfig.cache
 C:\Fontes\KerberGestao\KerberGestaoFrontMaster\obj\Debug\net6.0\ref\KerberGestaoFrontMaster.dll
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\virtual-select-master\virtual-select-master\.eslintrc.json
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\virtual-select-master\virtual-select-master\.stylelintrc.json
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\virtual-select-master\virtual-select-master\package-lock.json
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\virtual-select-master\virtual-select-master\package.json
+C:\Fontes\KerberGestao\KerberGestaoFrontMaster\bin\Debug\net6.0\virtual-select-master\virtual-select-master\tsconfig.json

@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\virtual-select.min.css",
+      "PackagePath": "staticwebassets\\css\\virtual-select.min.css"
+    },
+    {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -55,6 +59,10 @@
     {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\js\\virtual-select.min.js",
+      "PackagePath": "staticwebassets\\js\\virtual-select.min.js"
     },
     {
       "Id": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\lib\\bootstrap\\LICENSE",

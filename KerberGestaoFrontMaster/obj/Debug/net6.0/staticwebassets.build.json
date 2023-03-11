@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+ZYP7EGorTX23bVmHcT5YjCBe0P+e1+/4Zf9EEinOeU=",
+  "Hash": "bjWKjTDQ9yK3RNpz3wpA7VHErH1nE/vCWpY7i2cAsKQ=",
   "Source": "KerberGestaoFrontMaster",
   "BasePath": "_content/KerberGestaoFrontMaster",
   "Mode": "Default",
@@ -187,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\css\\virtual-select.min.css",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "css/virtual-select.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\virtual-select.min.css"
+    },
+    {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\favicon.ico",
       "SourceId": "KerberGestaoFrontMaster",
       "SourceType": "Discovered",
@@ -270,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\js\\virtual-select.min.js",
+      "SourceId": "KerberGestaoFrontMaster",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\",
+      "BasePath": "_content/KerberGestaoFrontMaster",
+      "RelativePath": "js/virtual-select.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\virtual-select.min.js"
     },
     {
       "Identity": "C:\\Fontes\\KerberGestao\\KerberGestaoFrontMaster\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
