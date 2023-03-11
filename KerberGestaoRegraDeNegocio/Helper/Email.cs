@@ -20,7 +20,7 @@ namespace KerberGestaoRegraDeNegocio.Helper
             {
                 var host = "smtp-mail.outlook.com";
                 var nome = "Kerber Móveis Planejados";
-                var username = "kerbermoveis@outlook.com";
+                var username = "kerbermoveisplanejados@outlook.com";
                 var senha = "K&RBERM0veis";
                 var porta = 587;
 

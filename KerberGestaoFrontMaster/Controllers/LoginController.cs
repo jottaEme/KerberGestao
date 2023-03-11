@@ -66,8 +66,8 @@ namespace KerberGestaoFrontMaster.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var usuario = usuarioService.EnviarEmailDeTrocaDeSenha(redefinirSenha.Email, redefinirSenha.LoginUsuario);
-                    if (usuario != null)
+                    var senhaTrocada = usuarioService.EnviarEmailDeTrocaDeSenha(redefinirSenha.Email, redefinirSenha.LoginUsuario);
+                    if (senhaTrocada)
                     {
                         TempData["MensagemSucesso"] = $"Enviamos para seu email cadastrado uma nova senha";
                         return RedirectToAction("Index", "Login");
