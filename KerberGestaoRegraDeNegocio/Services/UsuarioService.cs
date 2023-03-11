@@ -2,6 +2,7 @@
 using KerberGestaoRegraDeNegocio.Helper;
 using KerberGestaoRegraDeNegocio.Models.Dtos;
 using KerberGestaoRegraDeNegocio.Models.Entities;
+using KerberGestaoRegraDeNegocio.Repositories;
 using KerberGestaoRegraDeNegocio.Repositories.Interface;
 using KerberGestaoRegraDeNegocio.Services.Interfaces;
 
@@ -29,7 +30,17 @@ namespace KerberGestaoRegraDeNegocio.Services
         public void Criar(UsuarioDto cliente)
         {
             var usuarioEntity = mapper.Map<Usuario>(cliente);
-            usuarioRepository.Criar(usuarioEntity);
+            var emailExistente = usuarioRepository.BuscarPorEmail(cliente.Email);
+            var loginExistente = usuarioRepository.BuscarPorLogin(cliente.Login);
+
+            if(emailExistente == null && loginExistente == null)
+            {
+                usuarioRepository.Criar(usuarioEntity);
+            }
+            else
+            {
+                throw new Exception("Email e/ou login já existente(s)! Tente criar um novo usuário com email e login diferentes!");
+            }
         }
 
         public UsuarioDto PegarPeloId(int id)

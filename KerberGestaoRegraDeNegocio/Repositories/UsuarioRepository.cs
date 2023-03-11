@@ -76,6 +76,11 @@ namespace KerberGestaoRegraDeNegocio.Repositories
                                                           x.Email.ToLower().Equals(email.ToLower()));
         }
 
+        public Usuario BuscarPorEmail(string email)
+        {
+            return dbContext.Usuarios.FirstOrDefault(x => x.Email.ToLower().Equals(email.ToLower()));
+        }
+
         public Usuario AlterarSenha(Usuario usuario)
         {
 

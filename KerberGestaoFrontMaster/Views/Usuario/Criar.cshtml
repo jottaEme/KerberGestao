@@ -38,6 +38,7 @@
                 <option value="@PerfilEnum.Admin">Administrador</option>
                 <option value="@PerfilEnum.Padrao">Padrão</option>
             </select>
+            @Html.ValidationMessageFor(x => x.Perfil)
         </div>
         <div class="form-group">
             <label for="Senha">Senha</label>

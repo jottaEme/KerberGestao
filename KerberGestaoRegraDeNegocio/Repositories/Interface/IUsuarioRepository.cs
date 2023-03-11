@@ -6,6 +6,7 @@ namespace KerberGestaoRegraDeNegocio.Repositories.Interface
     {
         Usuario BuscarPorLogin(string login);
         Usuario BuscarPorEmailELogin(string email, string login);
+        Usuario BuscarPorEmail(string email);
         List<Usuario> PegarTodos();
         Usuario Criar(Usuario usuario);
         Usuario BuscarPeloId(int id);
