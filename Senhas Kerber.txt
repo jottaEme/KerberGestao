@@ -1,0 +1,36 @@
+
+Incluir logos na tela Home
+Arrumar email de mudança de senha
+
+orçamento
+
+aguardando
+listagem de material
+finalizado
+
+
+
+projeto
+
+aguardando
+em execução
+finalizado
+
+
+os
+
+em produção
+montagem
+finalizado
+
+kerbermoveisplanejados
+senha do banco: Kerberroot123@
+senha do user: admin UserM@ster123
+
+<option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+				
+				
+				
+
